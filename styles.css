@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500&display=swap');
+
+
+
+html{
+    font-family: "Poppins";
+    color:white;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.input{
+    display: block;
+    width:27vw;
+    border-radius: 4vw;
+    border:none;
+    height:4vh;
+    margin:30px;
+}
+#username-input{
+
+    font-size: 18px;
+}
+
+#form-container{
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width:30vw;
+    height: 30vh;
+    text-align: center;
+
+
+
+    /*color*/
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
