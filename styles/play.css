@@ -6,48 +6,37 @@ html{
 }
 
 
-#table-container{
-
-
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width:50vw;
+#image1{
+    width:400px;
+    height:400px;
+    background: url("/assets/imgs/sunrise.jpg");
 
 
 }
-.divTable{
-	display: table;
-	width: 100%;
-}
-.divTableRow {
-	display: table-row;
-}
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-}
-.divTableCell, .divTableHead {
-	border: 1px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
-}
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-	font-weight: bold;
-}
-.divTableFoot {
-	background-color: #EEE;
-	display: table-footer-group;
-	font-weight: bold;
-}
-.divTableBody {
-	display: table-row-group;
+
+#image1, #image2{
+
+    display: inline-block;
 }
 
+#image3{
+    width:400px;
+    height:400px;
+    background: url("/assets/imgs/sunrise.jpg");
+    background-position-y: -400px;
+
+
+}
+
+#image4{
+    width:400px;
+    height:400px;
+    margin-top:20px;
+    background: url("/assets/imgs/sunrise.jpg");
+    background-position-y: -800px;
+
+
+}
 
 
 

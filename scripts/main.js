@@ -1,7 +1,10 @@
 let fullImage;
 
 function loadImg(){
-    fullImage = loadImage("dependencies/imgs/sunrise.jpg");
+    document.getElementById("container").innerHTML="dkjdkejekij"
+    
+    
+    
     console.log("done");
     
     
