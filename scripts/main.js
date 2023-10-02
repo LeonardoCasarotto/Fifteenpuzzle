@@ -14,6 +14,7 @@ function loadImg(){
         toAdd+="</div>";
     }
 
+    
     toAdd+="</div>"
 
     document.body.innerHTML+=toAdd;
