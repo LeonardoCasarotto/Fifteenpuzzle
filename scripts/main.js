@@ -1,7 +1,6 @@
-let fullImage;
 
 function loadImg(){
-    let toAdd="";
+    let toAdd="<div id='game-container'>";
 
 
     let id=0;
@@ -15,6 +14,7 @@ function loadImg(){
         toAdd+="</div>";
     }
 
+    toAdd+="</div>"
 
     document.body.innerHTML+=toAdd;
 
@@ -22,11 +22,14 @@ function loadImg(){
 
         document.getElementById("div-cell-"+i).style.width= "200px";
         document.getElementById("div-cell-"+i).style.height= "200px";
-        document.getElementById("div-cell-"+i).style.margin= "10px";
+        document.getElementById("div-cell-"+i).style.margin= "5px";
         document.getElementById("div-cell-"+i).style.background= "url('/assets/imgs/sunrise.jpg')";
+        document.getElementById("div-cell-"+i).style.backgroundPositionX = "-"+ (i%4)*200+"px";
+        document.getElementById("div-cell-"+i).style.backgroundPositionY = "-"+ (i%4)*200+"px";
 
     }
 
+    
     const boxes = document.getElementsByClassName('div-cell1');
 
     for (const box of boxes) {
@@ -34,8 +37,10 @@ function loadImg(){
 
 
     }
+    
+    
 
-    console.log("done");
+    
 
 
 }
