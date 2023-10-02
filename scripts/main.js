@@ -22,6 +22,7 @@ function loadImg(){
 
         document.getElementById("div-cell-"+i).style.width= "200px";
         document.getElementById("div-cell-"+i).style.height= "200px";
+        document.getElementById("div-cell-"+i).style.margin= "10px";
         document.getElementById("div-cell-"+i).style.background= "url('/assets/imgs/sunrise.jpg')";
 
     }
@@ -30,7 +31,7 @@ function loadImg(){
 
     for (const box of boxes) {
         box.style.display = "inline-box";
-        box.style.padding = "10px";
+
 
     }
 
