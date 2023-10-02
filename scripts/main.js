@@ -1,4 +1,3 @@
-
 function loadImg(){
     let toAdd="<div id='game-container'>";
 
@@ -29,7 +28,7 @@ function loadImg(){
 
     }
 
-    
+
     const boxes = document.getElementsByClassName('div-cell1');
 
     for (const box of boxes) {
@@ -37,12 +36,11 @@ function loadImg(){
 
 
     }
-    
-    
 
-    
+
+
+
 
 
 }
 loadImg()
-
