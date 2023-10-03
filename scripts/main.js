@@ -5,7 +5,7 @@ function loadImg(){
     for(let i=0;i<4;i++) {
         toAdd+="<div class='div-row'>"
         for(let j=0;j<4;j++){
-            toAdd+="<div class='div-cell"+i+"' id='div-cell-"+id+"'></div>";
+            toAdd+="<div class='div-cell"+i+" puzzlePiece' class='puzzlePiece' id='div-cell-"+id+"' draggable='true'></div>";
             id++;
         }
         toAdd+="</div>";
@@ -32,7 +32,10 @@ function loadImg(){
     for (const box of boxes) {
         box.style.display = "inline-block";
     }
-    document.getElementById("div-cell-15").style.background="#3a3e45";
+    document.getElementById('div-cell-15').id = 'emptyPiece';
+    document.getElementById("emptyPiece").style.background="#3a3e45";
+
+    document.body.innerHTML+="<h1>"+localStorage.getItem("Username")+"</h1>"
 }
 
 loadImg();
