@@ -1,46 +1,18 @@
 html{
     font-family: "Poppins";
     color:white;
+    text-align: center;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 
 
-#image1{
-    width:400px;
-    height:400px;
-    background: url("/assets/imgs/sunrise.jpg");
 
+
+#game-container{
 
 }
-
-#image1, #image2{
-
-    display: inline-block;
-}
-
-#image3{
-    width:400px;
-    height:400px;
-    background: url("/assets/imgs/sunrise.jpg");
-    background-position-y: -400px;
-
-
-}
-
-#image4{
-    width:400px;
-    height:400px;
-    margin-top:20px;
-    background: url("/assets/imgs/sunrise.jpg");
-    background-position-y: -800px;
-
-
-}
-
-.div-row{
-    display: inline-block;
-}
-
-
+ .div-cell1, .div-cell2,.div-cell3,.div-cell0{
+     display: inline-block;
+ }
 
