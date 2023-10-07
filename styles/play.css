@@ -9,10 +9,16 @@ html{
 
 
 
-#game-container{
+#parent{
+    min-width:865px;
+    max-width: 870px;
+    margin:auto;
 
 }
+
  .div-cell1, .div-cell2,.div-cell3,.div-cell0{
      display: inline-block;
+
  }
+
 
