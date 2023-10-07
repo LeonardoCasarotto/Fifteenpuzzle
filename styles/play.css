@@ -16,17 +16,17 @@ html{
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         background-color: #ccc; /* Set your desired background color */
-        margin: 10px; /* Adjust margin as needed */
-        float: left; /* This will place it next to the #parent element */
-        /* Add any additional CSS for #newDiv here */
+    float:left;
+
+
 
 }
 
 #parent{
-    min-width:865px;
+    min-width:720px;
     max-width: 870px;
     margin:auto;
 

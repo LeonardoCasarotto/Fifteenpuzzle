@@ -61,6 +61,7 @@ function drop(e) {
 }
 
 function areAdjacent(div1, div2) {
+    
     const index1 = Array.from(div1.parentNode.children).indexOf(div1);
     const index2 = Array.from(div2.parentNode.children).indexOf(div2);
 
