@@ -1,14 +1,19 @@
+
+
 function loadImg(){
-    let toAdd="<div id='game-container'>";
+    let toAdd="<div id='parent'>";
 
     let id=0;
     for(let i=0;i<4;i++) {
-        toAdd+="<div class='div-row'>"
+        //toAdd+="<div class='div-row'>"
         for(let j=0;j<4;j++){
-            toAdd+="<div class='div-cell"+i+" puzzlePiece' class='puzzlePiece' id='div-cell-"+id+"' draggable='true'></div>";
+            toAdd+="<div class='div-cell"+i+" puzzlePiece' class='puzzlePiece' id='div-cell-"+id+"' draggable='true' " +
+                "ondragstart='drag(event)' ondrop='drop(event)' ondragover='allowDrop(event)'></div>";
+
+
             id++;
         }
-        toAdd+="</div>";
+        //toAdd+="</div>";
     }
 
     toAdd+="</div>"
@@ -36,6 +41,7 @@ function loadImg(){
     document.getElementById("emptyPiece").style.background="#3a3e45";
 
     document.body.innerHTML+="<h1>"+localStorage.getItem("Username")+"</h1>"
+    document.body.innerHTML+="<h1><button onclick='we()'>CIAO</button></h1>"
 }
 
 loadImg();
