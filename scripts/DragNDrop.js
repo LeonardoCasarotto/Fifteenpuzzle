@@ -21,71 +21,38 @@ function drag(e)
 }
 
 
-/*function drop(e)
-{
-    e.preventDefault();
-    clone=e.target.cloneNode(true);
-
-    let data=e.dataTransfer.getData("text"); //id del trapel che sposto
-
-
-    if(clone.id !== data) {
-        console.log("DIVERSO");
-
-        let nodelist=document.getElementById("parent").childNodes;
-
-
-        for(let i=0;i<nodelist.length;i++)
-        {
-
-            if(nodelist[i].id==data)
-            {
-                dragindex=i;
-                break;
-            }
-
-        }
-
-        document.getElementById("parent").replaceChild(document.getElementById(data),e.target);
-
-        document.getElementById("parent").insertBefore(clone,document.getElementById("parent").childNodes[dragindex]);
-        console.log(dragindex)
-        console.log("conseguente id sarà "+"div-cell-"+dragindex)
-        console.log(clone.id)
-
-
-
-    }
-
-}*/
 
 function drop(e) {
     e.preventDefault();
     clone = e.target.cloneNode(true);
 
     let data = e.dataTransfer.getData("text"); //id del trapel che sposto
+    let dragId;
 
     if (clone.id !== data) {
-        console.log("DIVERSO");
+        
 
         let nodelist = document.getElementById("parent").childNodes;
 
         for (let i = 0; i < nodelist.length; i++) {
             if (nodelist[i].id == data) {
                 dragindex = i;
+                dragId = nodelist[i].id;
+                
                 break;
             }
         }
 
-        if (areAdjacent(document.getElementById(data), e.target)) {
+        if (areAdjacent(document.getElementById(data), e.target) && clone.id =="emptyPiece"||
+            areAdjacent(document.getElementById(data), e.target) && dragId =="emptyPiece")
+        {
             document.getElementById("parent").replaceChild(document.getElementById(data), e.target);
 
             document.getElementById("parent").insertBefore(clone, document.getElementById("parent").childNodes[dragindex]);
-            console.log(dragindex);
-            console.log("conseguente id sarà " + "div-cell-" + dragindex);
-            console.log(clone.id);
+            
+            
         } else {
-            console.log("I div non sono adiacenti!");
+            alert("Attenzione, spostare i pezzi del puzzle nel riquadro vuoto!");
         }
     }
 }

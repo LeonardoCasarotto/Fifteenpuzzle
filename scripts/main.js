@@ -41,7 +41,7 @@ function loadImg(){
     document.getElementById("emptyPiece").style.background="#3a3e45";
 
     document.body.innerHTML+="<h1>"+localStorage.getItem("Username")+"</h1>"
-    document.body.innerHTML+="<h1><button onclick='we()'>CIAO</button></h1>"
+
 }
 
 loadImg();
