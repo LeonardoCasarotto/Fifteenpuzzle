@@ -1,3 +1,4 @@
 function press(){
-    console.log(document.cookie)
+    document.getElementById("username").innerHTML+=localStorage.getItem("Username");
+    document.getElementById("points").innerHTML+=localStorage.getItem("Points");
 }
