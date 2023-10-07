@@ -50,6 +50,9 @@ function drop(e) {
 
             document.getElementById("parent").insertBefore(clone, document.getElementById("parent").childNodes[dragindex]);
             
+            if(Completed()){
+                alert("congraturazioni");
+            }
             
         } else {
             alert("Attenzione, spostare i pezzi del puzzle nel riquadro vuoto!");
@@ -66,7 +69,23 @@ function areAdjacent(div1, div2) {
 
 
 
+function Completed(){
 
+    let nodelist = document.getElementById("parent").childNodes;
+
+    let getId = (element) => element.id;
+
+    let idList = Array.from(nodelist).map(getId);
+    
+    console.log(idList)
+
+    for(let i=0;i<idList.length-1;i++){
+        if(idList[i] !="div-cell-"+i){
+            return false;
+        }
+    }
+    return true;
+}
 
 
 

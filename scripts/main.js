@@ -5,15 +5,14 @@ function loadImg(){
 
     let id=0;
     for(let i=0;i<4;i++) {
-        //toAdd+="<div class='div-row'>"
         for(let j=0;j<4;j++){
             toAdd+="<div class='div-cell"+i+" puzzlePiece' class='puzzlePiece' id='div-cell-"+id+"' draggable='true' " +
                 "ondragstart='drag(event)' ondrop='drop(event)' ondragover='allowDrop(event)'></div>";
 
 
             id++;
-        }
-        //toAdd+="</div>";
+        }4
+
     }
 
     toAdd+="</div>"
