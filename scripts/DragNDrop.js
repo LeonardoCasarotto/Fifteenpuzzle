@@ -8,6 +8,9 @@ function start(){
     
     setUsername();
     addMoves(moves);
+    /*for(let i=0;i<14;i++){
+        mix();
+    }*/
 
 }
 
@@ -51,6 +54,13 @@ function drop(e) {
             areAdjacent(document.getElementById(data), e.target) && dragId =="emptyPiece")
         {
             document.getElementById("parent").replaceChild(document.getElementById(data), e.target);
+            
+            console.log("data:", data)
+            console.log("cloneid ",clone.id)
+            console.log("dragId ", dragId)
+          
+            console.log("etarget ", e.target)
+            
 
             document.getElementById("parent").insertBefore(clone, document.getElementById("parent").childNodes[dragindex]);
             addMoves(moves++);
@@ -102,5 +112,25 @@ function Completed(){
 
 start();
 
+function mix() {
+    let rand1 = Math.floor(Math.random() * 15); 
+    let rand2 = Math.floor(Math.random() * 15);
+
+    while (rand1 === rand2) {
+        rand2 = Math.floor(Math.random() * 15);
+    }
+
+    let temp = "div-cell-" + rand1;
+    let temp2 = "div-cell-" + rand2;
+
+    let target = document.getElementById(temp);
+    let target2 = document.getElementById(temp2);
+
+    let clone2 = target2.cloneNode(true);
+
+    document.getElementById("parent").replaceChild(clone2, target);
+
+    document.getElementById("parent").replaceChild(target, target2);
+}
 
 

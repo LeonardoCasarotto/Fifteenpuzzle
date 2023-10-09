@@ -21,11 +21,14 @@ html{
 
     box-sizing: border-box;
 }
-#username-input{
+#username-input, #image-choose{
 
     font-size: 18px;
 }
+#username-input::placeholder,#image-choose {
+    color: grey;
 
+}
 #form-container {
     border: 5px solid;
     position: absolute;
@@ -38,13 +41,16 @@ html{
 
 
 
-
-
-    /*color*/
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#startbtn{
+    font-family: "Poppins";
+    font-size: 24px;
+    background-color:lightblue;
 }
