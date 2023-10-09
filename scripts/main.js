@@ -26,7 +26,7 @@ function loadImg(){
         document.getElementById("div-cell-"+i).style.width= "180px";
         document.getElementById("div-cell-"+i).style.height= "180px";
         document.getElementById("div-cell-"+i).style.margin= "5px";
-        document.getElementById("div-cell-"+i).style.background= "url('/assets/imgs/sunrise.jpg')";
+        document.getElementById("div-cell-"+i).style.background= "url("+localStorage.getItem("Image")+")";
         document.getElementById("div-cell-"+i).style.backgroundSize = "900px";
         document.getElementById("div-cell-"+i).style.backgroundPositionY = "-"+ (Math.floor(i/4))*200+"px";
         document.getElementById("div-cell-"+i).style.backgroundPositionX = "-"+ (i%4)*200+"px";
@@ -41,7 +41,7 @@ function loadImg(){
     document.getElementById('div-cell-15').id = 'emptyPiece';
     document.getElementById("emptyPiece").style.background="#3a3e45";
 
-    document.body.innerHTML+="<h1>"+localStorage.getItem("Username")+"</h1>"
+    
 
 }
 

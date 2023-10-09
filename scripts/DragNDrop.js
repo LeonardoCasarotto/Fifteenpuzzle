@@ -1,9 +1,13 @@
 let dragindex=0;
 let clone="";
+let moves = 0;
 
 
 
-function we(){
+function start(){
+    
+    setUsername();
+    addMoves(moves);
 
 }
 
@@ -49,9 +53,17 @@ function drop(e) {
             document.getElementById("parent").replaceChild(document.getElementById(data), e.target);
 
             document.getElementById("parent").insertBefore(clone, document.getElementById("parent").childNodes[dragindex]);
+            addMoves(moves++);
+            
+            
             
             if(Completed()){
-                alert("congraturazioni");
+                if(window.confirm("Congraturazioni, hai totalizzato "+ calcPoints(moves) + " punti, vuoi ricominciare il gioco?")){
+                    window.location.assign("./index.html");
+                }
+                else{
+                    
+                }
             }
             
         } else {
@@ -88,6 +100,7 @@ function Completed(){
     return true;
 }
 
+start();
 
 
 
