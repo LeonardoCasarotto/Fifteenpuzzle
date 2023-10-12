@@ -14,7 +14,7 @@ function start(){
 
 }
 
-function allowDrop(e)
+function allowDrop(e)//previene il comportamento predefinito del browser
 {
 
     e.preventDefault();
@@ -25,15 +25,17 @@ function allowDrop(e)
 function drag(e)
 {
     e.dataTransfer.setData("text",e.target.id);
+    //tipo dato testo
+    //ottengo id dell'elemento che viene trascinato
 }
 
 
 
 function drop(e) {
     e.preventDefault();
-    clone = e.target.cloneNode(true);
+    clone = e.target.cloneNode(true); //copio quel l'oggetto su cui faccio il drop
 
-    let data = e.dataTransfer.getData("text"); //id del trapel che sposto
+    let data = e.dataTransfer.getData("text"); //id della cella che sposto
     let dragId;
 
     if (clone.id !== data) {
