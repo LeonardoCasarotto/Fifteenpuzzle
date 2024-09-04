@@ -12,7 +12,7 @@ function startGame(){
         location = location.replace("index.html","");
         console.log("current location:" +location);
         alert("ciao");
-        localStorage.setItem("Image", "/assets/imgs/"+image+".jpg");
+        localStorage.setItem("Image", location+"/assets/imgs/"+image+".jpg");
     }
 
 
