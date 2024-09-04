@@ -8,7 +8,11 @@ function startGame(){
     } 
     
     else{
-        localStorage.setItem("Image", "./assets/imgs/"+image+".jpg");
+        let location = window.location.toString();
+        location = location.replace("index.html","");
+        console.log("current location:" +location);
+        alert("ciao");
+        localStorage.setItem("Image", "/assets/imgs/"+image+".jpg");
     }
 
 
