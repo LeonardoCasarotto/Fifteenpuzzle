@@ -10,8 +10,6 @@ function startGame(){
     else{
         let location = window.location.toString();
         location = location.replace("index.html","");
-        console.log("current location:" +location);
-        alert("ciao");
         localStorage.setItem("Image", location+"/assets/imgs/"+image+".jpg");
     }
 
