@@ -8,7 +8,7 @@ function startGame(){
     } 
     
     else{
-        localStorage.setItem("Image", "/assets/imgs/"+image+".jpg");
+        localStorage.setItem("Image", "./assets/imgs/"+image+".jpg");
     }
 
 
