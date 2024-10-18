@@ -8,9 +8,9 @@ function start(){
     
     setUsername();
     addMoves(moves);
-    /*for(let i=0;i<14;i++){
+    for(let i=0;i<14;i++){
         mix();
-    }*/
+    }
 
 }
 
